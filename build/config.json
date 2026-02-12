@@ -1,0 +1,13 @@
+{
+    "icon-path":          "icon.ico",
+    "company-name":       "My Company",
+    "description":        "My Awesome App",
+    "file-type":          1,
+    "file-version":       [0, 0, 0, 0],
+    "product-name":       "My Project",
+    "product-version":    [0, 0, 0, 0],
+    "legal-copyright":    "2025 My Company",
+    "legal-trademarks":   "My Trademark",
+    "file-original-name": "app.exe",
+    "file-internal-name": "myapp"
+}
