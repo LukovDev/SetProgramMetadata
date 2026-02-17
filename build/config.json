@@ -8,6 +8,7 @@
     "product-version":    [0, 0, 0, 0],
     "legal-copyright":    "2025 My Company",
     "legal-trademarks":   "My Trademark",
-    "file-original-name": "app.exe",
-    "file-internal-name": "myapp"
+    "file-original-name": "myapp.exe",
+    "file-internal-name": "myapp",
+    "path-to-file":       "app.exe"
 }

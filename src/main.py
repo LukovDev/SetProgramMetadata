@@ -35,6 +35,7 @@ def main() -> None:
     legal_trademarks   = config["legal-trademarks"]
     file_original_name = config["file-original-name"]
     file_internal_name = config["file-internal-name"]
+    path_to_file       = config["path-to-file"]
 
     # Флаги:
     is_create = False
@@ -96,17 +97,17 @@ def main() -> None:
 
     # Удаляем иконку:
     if is_delete_icon:
-        os.system(f"\"{rh} -open {file_original_name} -save {file_original_name} -action delete -mask ICONGROUP,,\"")
-        os.system(f"\"{rh} -open {file_original_name} -save {file_original_name} -action delete -mask ICON,,\"")
+        os.system(f"\"{rh} -open {path_to_file} -save {path_to_file} -action delete -mask ICONGROUP,,\"")
+        os.system(f"\"{rh} -open {path_to_file} -save {path_to_file} -action delete -mask ICON,,\"")
 
     # Удаляем информацию:
     if is_delete_info:
-        os.system(f"\"{rh} -open {file_original_name} -save {file_original_name} -action delete -mask VERSIONINFO,,\"")
+        os.system(f"\"{rh} -open {path_to_file} -save {path_to_file} -action delete -mask VERSIONINFO,,\"")
 
     # Применяем конфигурацию:
     if is_apply:
         res = os.path.join(outdir, "app.res")
-        os.system(f"\"{rh} -open {file_original_name} -save {file_original_name} -action addoverwrite -res {res}\"")
+        os.system(f"\"{rh} -open {path_to_file} -save {path_to_file} -action addoverwrite -res {res}\"")
 
     # Чистим после работы:
     if os.path.isfile("build/tools/reshack.ini"):
